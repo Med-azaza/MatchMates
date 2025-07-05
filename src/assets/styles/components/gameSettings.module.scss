@@ -1,0 +1,24 @@
+@use "../utils/_variables.scss" as v;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: v.$color-8;
+  border-radius: 20px;
+  padding: 50px;
+  width: 650px;
+  h3 {
+    color: v.$color-6;
+  }
+  .buttonsContainer {
+    height: 50px;
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,36 @@
+@use "../utils/_variables" as v;
+
+button {
+  border-radius: 35px;
+  width: 100%;
+  font-weight: 700;
+  background-color: v.$color-2;
+  color: #fcfcfc;
+  &.big {
+    font-size: 32px;
+    height: 70px;
+  }
+  &.medium {
+    font-size: 26px;
+    height: 50px;
+  }
+  &.small {
+    font-size: 20px;
+    height: 50px;
+  }
+  &.primary {
+    background-color: v.$color-1;
+    color: #fcfcfc;
+  }
+  &.secondary.selected {
+    background-color: v.$color-3;
+  }
+  &.secondary {
+    &:hover {
+      &.selected {
+        background-color: v.$color-3;
+      }
+      background-color: v.$color-7;
+    }
+  }
+}

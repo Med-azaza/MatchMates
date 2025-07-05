@@ -1,0 +1,51 @@
+@use "../utils/_variables" as v;
+
+.container {
+  position: relative;
+  background-color: #dfe7ec;
+  height: 70px;
+  width: 250px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  transition: all 0.3s;
+  span:nth-child(1) {
+    font-size: 18px;
+    font-weight: 700;
+    color: v.$color-6;
+  }
+  span:nth-child(2) {
+    font-size: 32px;
+    font-weight: 700;
+    color: v.$color-3;
+  }
+  &.selected {
+    background-color: v.$color-1;
+    & > span {
+      color: v.$color-8;
+    }
+  }
+  .triangle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 0;
+    height: 0;
+    border-left: 1.2rem solid transparent;
+    border-right: 1.2rem solid transparent;
+    border-bottom: 1rem solid v.$color-1;
+  }
+  .label {
+    position: absolute;
+    width: 100%;
+    bottom: -2rem;
+    left: 0;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: v.$color-4;
+    text-align: center;
+  }
+}

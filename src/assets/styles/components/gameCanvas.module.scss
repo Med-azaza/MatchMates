@@ -1,0 +1,66 @@
+@use "../utils/_variables" as v;
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .grid {
+    display: grid;
+    gap: 20px;
+    &.four {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      .card {
+        width: 110px;
+        height: 110px;
+        transition: background-color 1s ease;
+      }
+    }
+    &.six {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      .card {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: v.$color-3;
+      color: v.$color-3;
+      cursor: pointer;
+      font-size: 44px;
+      font-weight: bold;
+      color: v.$color-8;
+      transition: background-color 1s;
+      span {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s, visibility 1s;
+      }
+      &:hover {
+        background-color: v.$color-7;
+      }
+      &.selected {
+        cursor: default;
+        background-color: v.$color-1;
+        span {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      &.matched {
+        cursor: default;
+        background-color: v.$color-2;
+        span {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
