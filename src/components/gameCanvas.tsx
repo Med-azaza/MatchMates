@@ -59,7 +59,9 @@ const GameCanvas = () => {
               {state.theme === "numbers" ? (
                 card.value
               ) : (
-                <FontAwesomeIcon icon={["fas", card.value as IconName]} />
+                <FontAwesomeIcon
+                  icon={["fas", card.value.toString() as IconName]}
+                />
               )}
             </span>
           </div>
