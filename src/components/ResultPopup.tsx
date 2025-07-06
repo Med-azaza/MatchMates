@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext } from "react";
 import styles from "../assets/styles/components/resultPopup.module.scss";
 import { GameContext } from "../context/gameContext";
 import Button from "./button";
