@@ -5,6 +5,7 @@ import TopBar from "../components/topBar";
 import styles from "../assets/styles/pages/game.module.scss";
 import Score from "../components/score";
 import GameCanvas from "../components/gameCanvas";
+import ResultPopup from "../components/ResultPopup";
 
 const Game = () => {
   const { state } = useContext(GameContext);
@@ -28,9 +29,11 @@ const Game = () => {
       <GameCanvas />
 
       {ended ? (
-        <div className={styles.popup}>
-          <div>done {finalTime}</div>
-        </div>
+        <ResultPopup
+          setEnded={setEnded}
+          time={finalTime}
+          setSeconds={setSeconds}
+        />
       ) : (
         <Score setSeconds={setSeconds} seconds={seconds} />
       )}
