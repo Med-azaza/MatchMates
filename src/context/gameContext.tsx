@@ -212,7 +212,7 @@ function gameReducer(state, action: GameAction) {
         theme: state.theme,
         players: state.players,
         playing: true,
-        cards: generateShuffledCards(state.gridSize),
+        cards: generateShuffledCards(state.gridSize, state.theme),
       };
     default:
       return state;
