@@ -89,7 +89,7 @@ const icons = [
 ];
 
 const generateShuffledCards = (gridSize: number, theme: string) => {
-  let cards;
+  let cardsReady;
   if (theme === "numbers") {
     const totalCards = (gridSize * gridSize) / 2;
     const cardValues = Array.from({ length: totalCards }, (_, i) => i);
@@ -102,6 +102,7 @@ const generateShuffledCards = (gridSize: number, theme: string) => {
       const j = Math.floor(Math.random() * (i + 1));
       [cards[i], cards[j]] = [cards[j], cards[i]];
     }
+    cardsReady = cards;
   } else {
     const shuffled = [...icons].sort(() => Math.random() - 0.5);
     const selectedIcons = shuffled.slice(0, (gridSize * gridSize) / 2);
@@ -115,10 +116,10 @@ const generateShuffledCards = (gridSize: number, theme: string) => {
         { id: uuidv4(), value: str }
       );
     });
-    cards = doubledObjects.sort(() => Math.random() - 0.5);
+    cardsReady = doubledObjects.sort(() => Math.random() - 0.5);
   }
 
-  return cards;
+  return cardsReady;
 };
 
 type GameAction =
