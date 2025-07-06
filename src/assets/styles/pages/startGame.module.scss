@@ -10,4 +10,10 @@
   background-color: $color-4;
   color: $color-8;
   gap: 50px;
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
 }

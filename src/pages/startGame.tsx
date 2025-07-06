@@ -4,7 +4,10 @@ import styles from "../assets/styles/pages/startGame.module.scss";
 const StartGame = () => {
   return (
     <div className={styles.container}>
-      <h1>MatchMates</h1>
+      <div className={styles.logo}>
+        <img src="./logo-brand.png" alt="logo" height={50} width={50} />
+        <h1>MatchMates</h1>
+      </div>
       <GameSettings />
     </div>
   );
