@@ -1,3 +1,5 @@
+@use "sass:map";
+
 //colors
 $color-1: #fda214;
 $color-2: #bcced9;
@@ -20,13 +22,13 @@ $breakpoints: (
   // Large devices (desktops)
   xl: 1200px,
   // Extra large devices (large desktops)
-  xxl: 1400px // Extra extra large devices (larger desktops),
+  xxl: 1400px // Extra extra large devices (larger desktops),,,
 );
 
 // Min-width media query mixin
 @mixin breakpoint-up($size) {
-  @if map-has-key($breakpoints, $size) {
-    @media (min-width: map-get($breakpoints, $size)) {
+  @if map.has-key($breakpoints, $size) {
+    @media (min-width: map.get($breakpoints, $size)) {
       @content;
     }
   } @else {
