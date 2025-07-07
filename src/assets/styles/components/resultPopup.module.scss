@@ -5,25 +5,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 2rem;
+  @include breakpoint-up(md) {
+    padding: 0;
+  }
   & > div {
     background: $color-5;
-    padding: 3rem;
+    padding: 1.5rem;
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 40rem;
+    @include breakpoint-up(md) {
+      padding: 3rem;
+    }
     .title {
       color: $color-4;
       font-weight: 700;
-      font-size: 3rem;
+      font-size: 2rem;
+      @include breakpoint-up(sm) {
+        font-size: 3rem;
+      }
     }
     .subtitle {
       color: $color-6;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.8rem;
       margin-bottom: 1rem;
+      @include breakpoint-up(sm) {
+        font-size: 1rem;
+      }
     }
     .card {
       background: #dfe7ec;
@@ -37,12 +50,18 @@
       span:nth-child(1) {
         color: $color-6;
         font-weight: 700;
-        font-size: 1rem;
+        font-size: 0.8rem;
+        @include breakpoint-up(sm) {
+          font-size: 1rem;
+        }
       }
       span:nth-child(2) {
         color: $color-3;
         font-weight: 700;
-        font-size: 2rem;
+        font-size: 1rem;
+        @include breakpoint-up(sm) {
+          font-size: 2rem;
+        }
       }
       &.winner {
         background-color: $color-4;
@@ -58,6 +77,11 @@
       width: 100%;
       margin-top: 2rem;
       gap: 1rem;
+      flex-direction: column;
+      @include breakpoint-up(sm) {
+        font-size: 1rem;
+        flex-direction: row;
+      }
     }
   }
 }

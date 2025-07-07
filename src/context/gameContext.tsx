@@ -86,6 +86,7 @@ const icons = [
   "dragon",
   "chess-rook",
   "chess-knight",
+  "cannabis",
 ];
 
 const generateShuffledCards = (gridSize: number, theme: string) => {

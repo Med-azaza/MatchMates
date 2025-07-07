@@ -3,18 +3,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 50px;
   .buttons {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    gap: 20px;
+    width: 250px;
+    gap: 10px;
+    @include breakpoint-up(sm) {
+      gap: 20px;
+      width: 300px;
+    }
   }
   .logo {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    h1 {
+      display: none;
+      @include breakpoint-up(md) {
+        display: block;
+      }
+    }
   }
 }

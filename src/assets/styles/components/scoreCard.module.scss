@@ -1,23 +1,43 @@
 .container {
   position: relative;
   background-color: #dfe7ec;
-  height: 70px;
-  width: 250px;
+  flex: 1;
   border-radius: 10px;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 5px 20px;
   transition: all 0.3s;
-  span:nth-child(1) {
+  flex-direction: column;
+  @include breakpoint-up(md) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 70px;
+  }
+  span:nth-child(1),
+  span:nth-child(2) {
     font-size: 18px;
     font-weight: 700;
     color: $color-6;
   }
-  span:nth-child(2) {
+  span:nth-child(3) {
     font-size: 32px;
     font-weight: 700;
     color: $color-3;
+  }
+  span:nth-child(1) {
+    display: none;
+    @include breakpoint-up(sm) {
+      display: block;
+    }
+  }
+  span:nth-child(2) {
+    display: block;
+    @include breakpoint-up(sm) {
+      display: none;
+    }
   }
   &.selected {
     background-color: $color-1;
@@ -32,9 +52,14 @@
     transform: translate(-50%, -100%);
     width: 0;
     height: 0;
-    border-left: 1.2rem solid transparent;
-    border-right: 1.2rem solid transparent;
-    border-bottom: 1rem solid $color-1;
+    border-left: 0.8rem solid transparent;
+    border-right: 0.8rem solid transparent;
+    border-bottom: 0.8rem solid $color-1;
+    @include breakpoint-up(sm) {
+      border-left: 1.2rem solid transparent;
+      border-right: 1.2rem solid transparent;
+      border-bottom: 1rem solid $color-1;
+    }
   }
   .label {
     position: absolute;
@@ -45,5 +70,9 @@
     letter-spacing: 5px;
     color: $color-4;
     text-align: center;
+    display: none;
+    @include breakpoint-up(lg) {
+      display: block;
+    }
   }
 }

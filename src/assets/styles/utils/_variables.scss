@@ -7,3 +7,29 @@ $color-5: #f2f2f2;
 $color-6: #7191a5;
 $color-7: #6395b8;
 $color-8: #fcfcfc;
+
+//breakpoints
+$breakpoints: (
+  xs: 320px,
+  // Extra small devices (phones)
+  sm: 576px,
+  // Small devices (landscape phones)
+  md: 768px,
+  // Medium devices (tablets)
+  lg: 992px,
+  // Large devices (desktops)
+  xl: 1200px,
+  // Extra large devices (large desktops)
+  xxl: 1400px // Extra extra large devices (larger desktops),
+);
+
+// Min-width media query mixin
+@mixin breakpoint-up($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$size}";
+  }
+}

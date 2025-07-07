@@ -32,7 +32,7 @@ const Score = ({ setSeconds, seconds }) => {
           {Array.from({ length: state.players }, (_, index) => (
             <ScoreCard
               key={index}
-              name={`Player ${index + 1}`}
+              name={index + 1}
               value={state.scores[index + 1]}
               selected={state.currentPlayer === index + 1}
             />

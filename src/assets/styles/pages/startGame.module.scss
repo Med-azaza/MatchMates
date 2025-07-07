@@ -10,6 +10,10 @@
   background-color: $color-4;
   color: $color-8;
   gap: 50px;
+  padding: 0 2rem;
+  @include breakpoint-up(md) {
+    padding: 0;
+  }
   .logo {
     display: flex;
     align-items: center;

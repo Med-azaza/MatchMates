@@ -61,6 +61,7 @@ const GameCanvas = () => {
               ) : (
                 <FontAwesomeIcon
                   icon={["fas", card.value.toString() as IconName]}
+                  className={styles.icon}
                 />
               )}
             </span>

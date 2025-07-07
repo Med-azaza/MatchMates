@@ -5,6 +5,18 @@
   justify-content: center;
   flex-direction: column;
   height: 100vh;
+  padding: 2rem;
+  min-height: 40rem;
+  gap: 1rem;
+  @include breakpoint-up(xl) {
+    padding: 3rem 0 0 0;
+  }
+  @include breakpoint-up(md) {
+    min-height: 50rem;
+  }
+  @include breakpoint-up(sm) {
+    min-height: 45rem;
+  }
   & > div {
     width: 100%;
   }
