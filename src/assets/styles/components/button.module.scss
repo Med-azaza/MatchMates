@@ -1,10 +1,8 @@
-@use "../utils/_variables" as v;
-
 button {
   border-radius: 35px;
   width: 100%;
   font-weight: 700;
-  background-color: v.$color-2;
+  background-color: $color-2;
   color: #fcfcfc;
   &.big {
     font-size: 32px;
@@ -19,18 +17,18 @@ button {
     height: 50px;
   }
   &.primary {
-    background-color: v.$color-1;
+    background-color: $color-1;
     color: #fcfcfc;
   }
   &.secondary.selected {
-    background-color: v.$color-3;
+    background-color: $color-3;
   }
   &.secondary {
     &:hover {
       &.selected {
-        background-color: v.$color-3;
+        background-color: $color-3;
       }
-      background-color: v.$color-7;
+      background-color: $color-7;
     }
   }
 }

@@ -1,5 +1,3 @@
-@use "../utils/_variables" as v;
-
 .container {
   position: absolute;
   inset: 0;
@@ -8,7 +6,7 @@
   align-items: center;
   justify-content: center;
   & > div {
-    background: v.$color-5;
+    background: $color-5;
     padding: 3rem;
     border-radius: 15px;
     display: flex;
@@ -17,12 +15,12 @@
     flex-direction: column;
     width: 40rem;
     .title {
-      color: v.$color-4;
+      color: $color-4;
       font-weight: 700;
       font-size: 3rem;
     }
     .subtitle {
-      color: v.$color-6;
+      color: $color-6;
       font-weight: 700;
       font-size: 1rem;
       margin-bottom: 1rem;
@@ -37,19 +35,19 @@
       align-items: center;
       justify-content: space-between;
       span:nth-child(1) {
-        color: v.$color-6;
+        color: $color-6;
         font-weight: 700;
         font-size: 1rem;
       }
       span:nth-child(2) {
-        color: v.$color-3;
+        color: $color-3;
         font-weight: 700;
         font-size: 2rem;
       }
       &.winner {
-        background-color: v.$color-4;
+        background-color: $color-4;
         span {
-          color: v.$color-8;
+          color: $color-8;
         }
       }
     }

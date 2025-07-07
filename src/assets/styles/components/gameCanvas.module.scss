@@ -1,5 +1,3 @@
-@use "../utils/_variables" as v;
-
 .container {
   height: 100%;
   display: flex;
@@ -30,12 +28,12 @@
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      background-color: v.$color-3;
-      color: v.$color-3;
+      background-color: $color-3;
+      color: $color-3;
       cursor: pointer;
       font-size: 44px;
       font-weight: bold;
-      color: v.$color-8;
+      color: $color-8;
       transition: background-color 1s;
       span {
         opacity: 0;
@@ -43,11 +41,11 @@
         transition: opacity 1s, visibility 1s;
       }
       &:hover {
-        background-color: v.$color-7;
+        background-color: $color-7;
       }
       &.selected {
         cursor: default;
-        background-color: v.$color-1;
+        background-color: $color-1;
         span {
           opacity: 1;
           visibility: visible;
@@ -55,7 +53,7 @@
       }
       &.matched {
         cursor: default;
-        background-color: v.$color-2;
+        background-color: $color-2;
         span {
           opacity: 1;
           visibility: visible;

@@ -1,16 +1,20 @@
-@use "../utils/_variables.scss" as v;
+// @use "../utils/_variables.scss" as v;
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-color: v.$color-8;
+  background-color: $color-8;
   border-radius: 20px;
-  padding: 50px;
-  width: 650px;
+  padding: 20px;
+  width: 100%;
+  @include breakpoint-up(md) {
+    padding: 50px;
+    width: 650px;
+  }
   h3 {
-    color: v.$color-6;
+    color: $color-6;
   }
   .buttonsContainer {
     height: 50px;
@@ -19,6 +23,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
+    @include breakpoint-up(sm) {
+      gap: 30px;
+    }
   }
 }
